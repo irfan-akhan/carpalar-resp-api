@@ -15,4 +15,5 @@ export interface SaleInterface extends Document {
 	createAt: Date;
 	updatedAt: Date;
 	payments: [];
+	status: string;
 }

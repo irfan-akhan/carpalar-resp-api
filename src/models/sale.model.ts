@@ -28,6 +28,11 @@ const SaleSchema = new Schema(
 		paid_transactions: { type: Number },
 		pending_transactions: { type: Number },
 		upfront_fee: { type: Number },
+		status: {
+			type: String,
+			default: "pending",
+			enum: ["pending", "active", "completed", "violated"],
+		},
 	},
 	{ timestamps: true }
 );

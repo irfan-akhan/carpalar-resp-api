@@ -15,7 +15,7 @@ export async function getAllCustomers(query: any) {
 }
 export async function getSingleCustomer(id: string) {
 	try {
-		return await CustomerModel.findById(id);
+		return await CustomerModel.findById(id).lean();
 	} catch (error: any) {
 		throw new Error(error);
 	}
