@@ -6,9 +6,11 @@
   "author": "Khan Irfan",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "ts-node build"
   },
   "dependencies": {
+    "@types/paystack": "^2.0.1",
     "bcrypt": "^5.0.1",
     "config": "^3.3.7",
     "cors": "^2.8.5",
@@ -19,6 +21,7 @@
     "mongoose": "^6.3.8",
     "morgan": "^1.10.0",
     "nanoid": "^4.0.0",
+    "paystack-api": "^2.0.6",
     "pino": "^8.0.0",
     "pino-pretty": "^8.0.0",
     "yup": "^0.32.11"

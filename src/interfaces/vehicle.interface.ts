@@ -1,6 +1,6 @@
 import { Document } from "mongoose";
 
-export interface carInterface extends Document {
+export interface vehicleInterface extends Document {
   title: string;
   tag_line: string;
   description: string;
@@ -11,19 +11,22 @@ export interface carInterface extends Document {
   sold_count: number;
   make: string;
   model: string;
+  vehicle_type: string;
+  payment_status: string;
   fuel_type: string;
   mileage: string;
   horsepower: string;
   colors: Array<string>;
-  total_cost: number;
   doors: number;
   passengers: number;
   down_payment: number;
+  total_cost: number;
   weekly_payment: number;
   air_condition: boolean;
   fm: boolean;
   audio_input: boolean;
   fog_lights: boolean;
+  status: string;
   createdAt: Date;
   updatedAt: Date;
 }
