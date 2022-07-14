@@ -5,6 +5,7 @@ import salesRouter from "./salesRoutes";
 import vehicleRouter from "./vehicleRoutes";
 import userRouter from "./userRoutes";
 import customerRouter from "./customerRoutes";
+import getDashboardStats from "../utilis/dashboardStats";
 
 function routes(APP: Express) {
 	APP.get(
@@ -19,6 +20,7 @@ function routes(APP: Express) {
 	APP.use("/api/applications", applicationRouter);
 	APP.use("/api/sales", salesRouter);
 	APP.use("/api/customers", customerRouter);
+	APP.use("/api/dashboard/stats", getDashboardStats);
 }
 
 export default routes;

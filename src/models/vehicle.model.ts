@@ -27,9 +27,9 @@ const VehicleSchema = new Schema(
 		manufacturing_year: Date,
 		horsepower: String,
 		status: {
-			type: String,
-			default: "deActive",
-			enum: ["deActive", "active"],
+			type: Number,
+			default: 1,
+			enum: [0, 1],
 		},
 		fm: { type: String, default: "false" },
 		air_condition: { type: String, default: "false" },

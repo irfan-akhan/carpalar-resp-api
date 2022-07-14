@@ -39,6 +39,26 @@ export async function getSingleVehicle(id: string) {
 		throw new Error(e);
 	}
 }
+export async function searchVehicles(query: any) {
+	try {
+		// return await VehicleModel.find({});
+		console.log("serach term", query);
+		const searchTerm = new RegExp(query, "i");
+		const results = VehicleModel.find({
+			$or: [
+				{ title: { $regex: searchTerm } },
+				// { description: { $regex: searchTerm } },
+				// { tag_line: { $regex: searchTerm } },
+				{ make: { $regex: searchTerm } },
+				{ model: { $regex: searchTerm } },
+			],
+		});
+
+		return results;
+	} catch (e: any) {
+		throw new Error(e);
+	}
+}
 export async function getVehicles(query: any) {
 	try {
 		// return await VehicleModel.find({});
